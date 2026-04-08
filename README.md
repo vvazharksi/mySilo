@@ -25,7 +25,7 @@ A personal file sync daemon that keeps a local folder in sync with an AWS S3 buc
 - [Terraform](https://www.terraform.io/) >= 1.5 (for deploying the Lambda)
 - AWS credentials configured (`~/.aws/credentials` or environment variables)
 
-## Deploy the Lambda (one time)
+## Deploy the Lambda
 
 The Lambda keeps the remote state file up to date so all machines can detect changes without expensive S3 list calls.
 
