@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.blackdird.mysilo</string>
+
+    <!-- Binary + config flag -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/FOOBAR/.local/bin/mysilo</string>
+        <string>start</string>
+        <string>--config</string>
+        <string>/Users/FOOBAR/Documents/Projects/Personal/vDrive/v2/local/config.yaml</string>
+    </array>
+
+    <!-- Start automatically when you log in -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <!-- Restart automatically if it crashes -->
+    <key>KeepAlive</key>
+    <true/>
+
+    <!-- Throttle restarts — wait 10s before restarting after a crash -->
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+
+    <!-- Log files (separate from mysilo's own log) -->
+    <key>StandardOutPath</key>
+    <string>/Users/FOOBAR/mySilo/.mysilo/launchd.stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/FOOBAR/mySilo/.mysilo/launchd.stderr.log</string>
+
+    <!-- Working directory -->
+    <key>WorkingDirectory</key>
+    <string>/Users/FOOBAR/Documents/Projects/Personal/vDrive/v2/local</string>
+
+    <!-- Pass PATH so mysilo can find AWS CLI tools if needed -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/Users/FOOBAR/.local/bin:/usr/local/bin:/usr/bin:/bin</string>
+    </dict>
+</dict>
+</plist>
