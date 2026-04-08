@@ -113,7 +113,7 @@ document.pdf                          ← your local version (untouched)
 document.conflict_20260406_143022.pdf ← remote version
 ```
 
-Run `--conflicts` to list them. Delete the copy you don't want, the conflict marker clears automatically on the next reconciliation.
+Run `mysilo conflicts` to list them. Delete the copy you don't want, the conflict marker clears automatically on the next reconciliation.
 
 ### Handling failed uploads
 
