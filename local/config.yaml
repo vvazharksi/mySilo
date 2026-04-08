@@ -1,0 +1,40 @@
+# mySilo configuration
+local_directory: /Users/FOOBAR/mySilo
+bucket: mysilo-bucket
+region: eu-west-1
+
+# How often to run a full reconciliation (in minutes)
+sync_interval_minutes: 2
+
+# Remote state file (must match REMOTE_STATE_KEY in Terraform)
+remote_state_key: .mysilo_remote_state.json
+# How often to poll S3 for remote changes (seconds).
+remote_poll_seconds: 30
+
+# Number of parallel upload/download workers during reconciliation
+upload_workers: 5
+
+# Retry settings 
+max_retries: 3
+retry_backoff_seconds: 2.0
+
+# SSE-KMS encryption for files stored in S3.
+# Omit or leave blank to use the AWS-managed S3 key.
+# Can be set via MYSILO_KMS_KEY_ID environment variable.
+# kms_key_id: "arn:aws:kms:eu-west-1:123456789012:key/your-key-id"
+
+# Patterns to ignore
+ignore_patterns:
+  - .DS_Store
+  - __pycache__
+  - "*.pyc"
+  - .git
+  - Thumbs.db
+  - .Spotlight-V100
+  - .Trashes
+  - .fseventsd
+  - "*.tmp"
+  - "~$*"
+  - .mysilo_state.json
+  - .mysilo_state.json.tmp
+  - .mysilo
