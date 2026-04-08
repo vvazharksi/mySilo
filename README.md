@@ -1,7 +1,7 @@
 # mySilo
 
 ![Version](https://img.shields.io/badge/version-1.2.0-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 ![AWS S3](https://img.shields.io/badge/storage-AWS%20S3-orange)
 
 A personal file sync daemon that keeps a local folder in sync with an AWS S3 bucket. Drop files into the folder and they upload automatically. Files added from another machine are detected and downloaded within seconds.

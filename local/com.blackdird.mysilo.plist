@@ -12,7 +12,7 @@
         <string>/Users/FOOBAR/.local/bin/mysilo</string>
         <string>start</string>
         <string>--config</string>
-        <string>/Users/FOOBAR/Documents/Projects/Personal/vDrive/v2/local/config.yaml</string>
+        <string>/Users/FOOBAR/mySilo/local/config.yaml</string>
     </array>
 
     <!-- Start automatically when you log in -->
